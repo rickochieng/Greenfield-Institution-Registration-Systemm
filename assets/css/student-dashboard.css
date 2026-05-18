@@ -1,0 +1,290 @@
+.welcome-banner {
+    background: linear-gradient(135deg, #111111, #0a0a0a);
+    border-radius: var(--radius-xl);
+    padding: 2rem;
+    margin-bottom: 2rem;
+    border: 1px solid #2a2a2a;
+    position: relative;
+    overflow: hidden;
+}
+
+.welcome-banner::before {
+    content: '';
+    position: absolute;
+    top: -30px;
+    right: -30px;
+    width: 150px;
+    height: 150px;
+    background: radial-gradient(circle, rgba(255,255,255,0.03), transparent);
+    border-radius: 50%;
+}
+
+.welcome-banner h1 {
+    color: white;
+    margin-bottom: 0.5rem;
+}
+
+.student-badge {
+    display: inline-block;
+    background: #1a1a1a;
+    padding: 0.4rem 1rem;
+    border-radius: 50px;
+    font-size: 0.8rem;
+    margin-top: 0.75rem;
+    color: #aaa;
+}
+
+/* UNIQUE GRID 5: ZIGZAG STATS GRID */
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+.stat-card {
+    background: #111111;
+    border-radius: var(--radius-lg);
+    padding: 1.25rem;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    border: 1px solid #1a1a1a;
+    transition: all 0.3s ease;
+}
+
+.stat-card:nth-child(1) {
+    transform: skewX(-2deg);
+}
+
+.stat-card:nth-child(2) {
+    transform: skewX(2deg);
+}
+
+.stat-card:nth-child(3) {
+    transform: skewX(-1deg);
+}
+
+.stat-card:nth-child(4) {
+    transform: skewX(1deg);
+}
+
+.stat-card:hover {
+    transform: skewX(0deg) translateY(-5px);
+    background: #151515;
+}
+
+.stat-icon {
+    width: 50px;
+    height: 50px;
+    background: #1a1a1a;
+    border-radius: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.stat-icon i {
+    font-size: 1.3rem;
+    color: #ccc;
+}
+
+.stat-number {
+    font-size: 1.6rem;
+    font-weight: 700;
+    color: white;
+}
+
+.stat-label {
+    color: #888;
+    font-size: 0.8rem;
+}
+
+.quick-actions {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+    margin-bottom: 2rem;
+}
+
+/* UNIQUE GRID 6: SIDEWAYS SCROLL COURSES */
+.courses-container {
+    margin-bottom: 2rem;
+}
+
+.courses-title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+.courses-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.course-item {
+    background: #111111;
+    border-radius: var(--radius);
+    padding: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+    border-left: 3px solid #555;
+    transition: all 0.3s ease;
+}
+
+.course-item:nth-child(1) {
+    border-left-color: #666;
+    margin-left: 0;
+}
+
+.course-item:nth-child(2) {
+    border-left-color: #777;
+    margin-left: 15px;
+}
+
+.course-item:nth-child(3) {
+    border-left-color: #888;
+    margin-left: 30px;
+}
+
+.course-item:nth-child(4) {
+    border-left-color: #999;
+    margin-left: 45px;
+}
+
+.course-item:hover {
+    transform: translateX(10px);
+    background: #151515;
+}
+
+.course-info h3 {
+    color: white;
+    margin-bottom: 0.25rem;
+    font-size: 1rem;
+}
+
+.course-info p {
+    color: #888;
+    font-size: 0.8rem;
+}
+
+.progress-wrapper {
+    min-width: 150px;
+}
+
+.progress-bar {
+    height: 5px;
+    background: #1a1a1a;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.progress-fill {
+    height: 100%;
+    background: #666;
+    border-radius: 10px;
+}
+
+.progress-text {
+    font-size: 0.7rem;
+    color: #888;
+    margin-top: 0.25rem;
+    text-align: right;
+}
+
+/* Two column layout */
+.two-column {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    margin-bottom: 2rem;
+}
+
+.schedule-list {
+    background: #111111;
+    border-radius: var(--radius-lg);
+    padding: 1.25rem;
+    border: 1px solid #1a1a1a;
+}
+
+.schedule-item {
+    display: flex;
+    gap: 1rem;
+    padding: 0.75rem 0;
+    border-bottom: 1px solid #1a1a1a;
+}
+
+.schedule-time {
+    min-width: 80px;
+    font-weight: 600;
+    color: #ccc;
+}
+
+.schedule-details h4 {
+    color: white;
+    font-size: 0.9rem;
+    margin-bottom: 0.25rem;
+}
+
+.schedule-details p {
+    color: #888;
+    font-size: 0.8rem;
+}
+
+.announcement-list {
+    background: #111111;
+    border-radius: var(--radius-lg);
+    padding: 1.25rem;
+    border: 1px solid #1a1a1a;
+}
+
+.announcement-item {
+    padding: 0.75rem 0;
+    border-bottom: 1px solid #1a1a1a;
+}
+
+.announcement-title {
+    font-weight: 600;
+    color: white;
+    margin-bottom: 0.25rem;
+}
+
+.announcement-date {
+    font-size: 0.7rem;
+    color: #666;
+    margin-bottom: 0.5rem;
+}
+
+.announcement-content {
+    color: #aaa;
+    font-size: 0.85rem;
+}
+
+@media (max-width: 1024px) {
+    .stats-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .two-column {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+}
+
+@media (max-width: 640px) {
+    .stats-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .course-item:nth-child(2),
+    .course-item:nth-child(3),
+    .course-item:nth-child(4) {
+        margin-left: 0;
+    }
+}

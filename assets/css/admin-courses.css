@@ -1,0 +1,160 @@
+/* ADMIN COURSES - TABLE GRID WITH VISUAL HIERARCHY */
+
+.page-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin-bottom: 2rem;
+}
+
+.page-header h1 {
+    color: white;
+}
+
+/* Toolbar */
+.toolbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+    background: #111111;
+    padding: 1rem;
+    border-radius: var(--radius-lg);
+    border: 1px solid #1a1a1a;
+}
+
+.search-wrapper {
+    flex: 1;
+    max-width: 300px;
+}
+
+.search-wrapper input {
+    width: 100%;
+    padding: 0.6rem 1rem;
+    background: #0d0d0d;
+    border: 1px solid #2a2a2a;
+    border-radius: var(--radius);
+    color: white;
+}
+
+.filter-wrapper select {
+    padding: 0.6rem 1rem;
+    background: #0d0d0d;
+    border: 1px solid #2a2a2a;
+    border-radius: var(--radius);
+    color: white;
+    cursor: pointer;
+}
+
+/* UNIQUE GRID 9: TABLE WITH STRIPED VISUAL GRID */
+.data-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.data-table th {
+    background: #0d0d0d;
+    padding: 1rem;
+    text-align: left;
+    font-weight: 600;
+    color: white;
+    border-bottom: 2px solid #2a2a2a;
+}
+
+.data-table td {
+    padding: 1rem;
+    border-bottom: 1px solid #1a1a1a;
+    color: #aaa;
+}
+
+/* Alternating row colors - not striped but gradient */
+.data-table tr:nth-child(odd) {
+    background: #0f0f0f;
+}
+
+.data-table tr:nth-child(even) {
+    background: #111111;
+}
+
+.data-table tr:hover {
+    background: #181818;
+}
+
+.data-table tr:hover td {
+    color: #ddd;
+}
+
+/* Action Icons */
+.action-icons {
+    display: flex;
+    gap: 0.75rem;
+}
+
+.action-icons a {
+    color: #888;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    font-size: 1rem;
+}
+
+.action-icons a:hover {
+    color: white;
+    transform: scale(1.1);
+}
+
+.action-icons a.delete:hover {
+    color: #ef4444;
+}
+
+/* Modal Form */
+.modal-form .form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+}
+
+.modal-actions {
+    display: flex;
+    justify-content: flex-end;
+    gap: 1rem;
+    margin-top: 1.5rem;
+}
+
+.info-note {
+    margin-top: 2rem;
+    padding: 1rem;
+    background: #0d0d0d;
+    border-radius: var(--radius);
+    text-align: center;
+    font-size: 0.8rem;
+    color: #666;
+    border: 1px solid #1a1a1a;
+}
+
+@media (max-width: 768px) {
+    .toolbar {
+        flex-direction: column;
+    }
+    
+    .search-wrapper {
+        max-width: 100%;
+        width: 100%;
+    }
+    
+    .filter-wrapper {
+        width: 100%;
+    }
+    
+    .filter-wrapper select {
+        width: 100%;
+    }
+    
+    .modal-form .form-row {
+        grid-template-columns: 1fr;
+        gap: 0;
+    }
+}
